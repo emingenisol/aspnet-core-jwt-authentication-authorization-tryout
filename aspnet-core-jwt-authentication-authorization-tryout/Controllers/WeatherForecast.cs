@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace aspnet_core_jwt_authentication_authorization_tryout.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = UserRoles.Admin)]
     [ApiController]
     [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
