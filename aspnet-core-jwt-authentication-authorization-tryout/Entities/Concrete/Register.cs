@@ -7,5 +7,6 @@ namespace aspnet_core_jwt_authentication_authorization_tryout.Entities.Concrete
         public string? Username { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
+        public string? RoleType { get; set; }
     }
 }

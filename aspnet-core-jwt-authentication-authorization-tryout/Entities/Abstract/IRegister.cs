@@ -13,5 +13,7 @@ namespace aspnet_core_jwt_authentication_authorization_tryout.Entities.Abstract
 
         [Required(ErrorMessage = "Password is required")]
         string? Password { get; set; }
+
+        string? RoleType { get; set; }
     }
 }
