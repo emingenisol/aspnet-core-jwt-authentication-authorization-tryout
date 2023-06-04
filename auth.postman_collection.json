@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "b6c8a578-0635-40c5-8189-1424a2789d26",
+		"name": "Authentication and Authorization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18082701"
+	},
+	"item": [
+		{
+			"name": "WeatherForecastResults",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdHVzZXIiLCJqdGkiOiJhMTM4NWY2Ny0zNWRiLTQ3NzQtOWMxYS05YTJhNjFiY2E4YTkiLCJleHAiOjE2ODU4OTY1ODcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDcwMCJ9.U0KDSmROm94HVglq8WJFwQ5HT7v5ujhrhZ8cucSnzm4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44358/api/WeatherForecast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44358",
+					"path": [
+						"api",
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"adminuser3\",\r\n    \"email\": \"info@emingenisol.com\",\r\n    \"password\": \"Pwd.1234\",\r\n    \"roleType\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44358/api/Authenticate/signup",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44358",
+					"path": [
+						"api",
+						"Authenticate",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"adminuser3\",\r\n  \"password\": \"Pwd.1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44358/api/Authenticate/signin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44358",
+					"path": [
+						"api",
+						"Authenticate",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
